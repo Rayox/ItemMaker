@@ -9,6 +9,7 @@ Date of File creation: 2018-03-21
 =================================================================================
 */
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -81,6 +82,20 @@ public class ItemMaker {
 		}
 		
 		return item;
+		
+	}
+	
+	public static Map<List<Enchantment>, List<Integer>> createEnchantmentMap(List<Enchantment> enchantmentList, List<Integer> levelList) {
+		
+		Map<List<Enchantment>, List<Integer>> map = new HashMap<>();
+		
+		if(enchantmentList.size() > 0 && enchantmentList.size() == levelList.size()) {
+			
+			map.put(enchantmentList, levelList);
+			
+		}
+		
+		return map;
 		
 	}
 	
